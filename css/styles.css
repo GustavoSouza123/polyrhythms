@@ -16,6 +16,13 @@ a {
 	color: #00b7ff
 }
 
+.canvas-div {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 50px;
+}
+
 canvas {
     background: #000;
 }
