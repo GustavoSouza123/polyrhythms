@@ -4,10 +4,11 @@
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link rel="stylesheet" href="./css/styles.css" />
-	<title>Polyrythm</title>
+	<title>Polyrythms</title>
 </head>
 <body>
-	<h1>Hello World</h1>
+	<h1>Polyrythms</h1>
+	<p>A <a href="https://www.youtube.com/watch?v=eX-ODcr3XJg">freeCodeCamp tutorial</a></p>
 	<canvas id="myCanvas"></canvas>
 
 	<script src="./js/sound.js"></script>
@@ -16,13 +17,13 @@
 	<script>
 		const myCanvas = document.getElementById('myCanvas');
 
-		const size = 800;
+		const size = 1200;
 		myCanvas.width = size;
 		myCanvas.height = size / 2;
 
 		const trackCenter = { x: size / 2, y: size / 2 };
 		const trackMinRadius = 100;
-		const trackStep = 15;
+		const trackStep = 25;
 		const ballRadius = 6;
 		const ballMinSpeed = 0.1; // default 0.03
 		const ballSpeedStep = -0.005; // defauly -0.0005
@@ -43,7 +44,13 @@
 			const ballSoundFrequency = soundFrequencies[i];
 			const hue = (i * -360) / N;
 			const track = new Track(trackCenter, trackRadius, hue);
-			const ball = new Ball(track, ballRadius, ballSpeed, ballSoundFrequency, hue);
+			const ball = new Ball(
+				track,
+				ballRadius,
+				ballSpeed,
+				ballSoundFrequency,
+				hue
+			);
 			tracks.push(track);
 			balls.push(ball);
 		}
